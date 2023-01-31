@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+</head>
+<body>
+    {% for person in persons %}
+    <div>
+        <a href="{{person.get_absolute_url}}">{{person.name}}</a>
+    </div>
+    <hr>
+    {% endfor %}
+    <h2>{{current_person.name}}</h2>
+    <h2>{{current_person.age}}</h2>
+    <h2>{{current_person.gender}}</h2>
+    <h2>{{current_person.address}}</h2>
+    {% for el in person_view %}
+    <a href="{{ el.get_absolute_url }}"></a>
+    {% endfor %}
+</body>
+</html>
